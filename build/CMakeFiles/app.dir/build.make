@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/enis/Documents/c++_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/enis/Documents/c++_project
+CMAKE_BINARY_DIR = /home/enis/Documents/c++_project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/app.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/app.dir/progress.make
 include CMakeFiles/app.dir/flags.make
 
 CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/app.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/enis/Documents/c++_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/main.cpp.o -MF CMakeFiles/app.dir/src/main.cpp.o.d -o CMakeFiles/app.dir/src/main.cpp.o -c /home/enis/Documents/c++_project/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/enis/Documents/c++_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/main.cpp.o -MF CMakeFiles/app.dir/src/main.cpp.o.d -o CMakeFiles/app.dir/src/main.cpp.o -c /home/enis/Documents/c++_project/src/main.cpp
 
 CMakeFiles/app.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/enis/Documents/c++_project/src/main.cpp > CMakeFiles/app.dir/src/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/enis/Documents/c++_project/src/main.cpp > CMakeFiles/app.dir/src/main.cpp.i
 
 CMakeFiles/app.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/enis/Documents/c++_project/src/main.cpp -o CMakeFiles/app.dir/src/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/enis/Documents/c++_project/src/main.cpp -o CMakeFiles/app.dir/src/main.cpp.s
 
 CMakeFiles/app.dir/src/Account.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/src/Account.cpp.o: src/Account.cpp
+CMakeFiles/app.dir/src/Account.cpp.o: ../src/Account.cpp
 CMakeFiles/app.dir/src/Account.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/enis/Documents/c++_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/Account.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/Account.cpp.o -MF CMakeFiles/app.dir/src/Account.cpp.o.d -o CMakeFiles/app.dir/src/Account.cpp.o -c /home/enis/Documents/c++_project/src/Account.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/enis/Documents/c++_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/Account.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/Account.cpp.o -MF CMakeFiles/app.dir/src/Account.cpp.o.d -o CMakeFiles/app.dir/src/Account.cpp.o -c /home/enis/Documents/c++_project/src/Account.cpp
 
 CMakeFiles/app.dir/src/Account.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/Account.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/enis/Documents/c++_project/src/Account.cpp > CMakeFiles/app.dir/src/Account.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/enis/Documents/c++_project/src/Account.cpp > CMakeFiles/app.dir/src/Account.cpp.i
 
 CMakeFiles/app.dir/src/Account.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/Account.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/enis/Documents/c++_project/src/Account.cpp -o CMakeFiles/app.dir/src/Account.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/enis/Documents/c++_project/src/Account.cpp -o CMakeFiles/app.dir/src/Account.cpp.s
 
 # Object files for target app
 app_OBJECTS = \
@@ -109,7 +109,7 @@ app: CMakeFiles/app.dir/src/main.cpp.o
 app: CMakeFiles/app.dir/src/Account.cpp.o
 app: CMakeFiles/app.dir/build.make
 app: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/enis/Documents/c++_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/enis/Documents/c++_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/app.dir/clean:
 .PHONY : CMakeFiles/app.dir/clean
 
 CMakeFiles/app.dir/depend:
-	cd /home/enis/Documents/c++_project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/enis/Documents/c++_project /home/enis/Documents/c++_project /home/enis/Documents/c++_project /home/enis/Documents/c++_project /home/enis/Documents/c++_project/CMakeFiles/app.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/enis/Documents/c++_project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/enis/Documents/c++_project /home/enis/Documents/c++_project /home/enis/Documents/c++_project/build /home/enis/Documents/c++_project/build /home/enis/Documents/c++_project/build/CMakeFiles/app.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/app.dir/depend
 

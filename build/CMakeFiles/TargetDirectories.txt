@@ -1,0 +1,3 @@
+/home/enis/Documents/c++_project/build/CMakeFiles/app.dir
+/home/enis/Documents/c++_project/build/CMakeFiles/edit_cache.dir
+/home/enis/Documents/c++_project/build/CMakeFiles/rebuild_cache.dir
