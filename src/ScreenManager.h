@@ -77,4 +77,13 @@ void showOverDrawScreen(){
     std::cout << "Press Any Button To Continue...";
 };
 
+void showCantRemoveAccountScreen(){
+    std::cout << std::endl;
+    std::cout << "***Account Removal Prevented***" << std::endl;
+    std::cout << "-------------------------------" << std::endl;
+    std::cout << "Sorry, You Have Money In Your Account Still." << std::endl;
+    std::cout << "Try Again After Withdrawing Your Money." << std::endl;
+    std::cout << "Press Any Button To Continue...";
+};
+
 #endif

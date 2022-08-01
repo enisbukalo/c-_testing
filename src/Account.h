@@ -1,6 +1,7 @@
 #ifndef account_h
 #define account_h
 
+#include <iostream>
 #include <filesystem>
 #include <fstream>
 #include <string>
@@ -17,6 +18,7 @@ class Account{
         void createAccount();
         void depositToAccount(double);
         bool withdrawFromAccount(double);
+        void removeAccount();
 
         //Getters
         bool getAccountExists();

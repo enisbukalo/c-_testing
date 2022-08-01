@@ -65,7 +65,8 @@ int main()
             double depositAmount;
             double withdrawAmount;
             bool overdraw;
-            char withdrawSelection;
+            std::string withdrawSelection;
+            std::string removalSelection;
 
             account.showWelcomeMessage();
             showAccountMenu();
@@ -77,30 +78,41 @@ int main()
             case 1: 
                 account.showWelcomeMessage();
                 showDepositScreen();
-                std::cin >> depositAmount;
-                account.depositToAccount(depositAmount);
+                if (!(std::cin >> depositAmount)){
+                    std::cin.clear();
+                    std::cin.ignore(123, '\n');
+                }else{
+                    account.depositToAccount(depositAmount);
+                }
                 break;
             case 2:
-                //TODO Check if account exists first.
-                //TODO Read account file, pull balance information.
-                //TODO If sufficient funds, remove from balance, else block.
                 account.showWelcomeMessage();
                 showWithdrawalScreen();
-                std::cin >> withdrawAmount;
-                overdraw = account.withdrawFromAccount(withdrawAmount);
+                if (!(std::cin >> withdrawAmount)){
+                    std::cin.clear();
+                    std::cin.ignore(123, '\n');
+                }else{
+                    overdraw = account.withdrawFromAccount(withdrawAmount);
 
-                if (overdraw){
-                    //Linux specific to clear terminal.
-                    system("clear");
-                    showOverDrawScreen();
-                    std::cin >> withdrawSelection;
+                    if (overdraw){
+                        //Linux specific to clear terminal.
+                        system("clear");
+                        showOverDrawScreen();
+                        std::cin >> withdrawSelection;
+                    }
                 }
 
                 break;
             case 3:
-                //TODO Check if account exists first.
-                //TODO If funds are zero, remove account, else block.
-                std::cout << "REMOVE ACCOUNT" << std::endl;
+                if (account.getAccountBalance() > 0.0){
+                    //Linux specific to clear terminal.
+                    system("clear");
+                    showCantRemoveAccountScreen();
+                    std::cin >> removalSelection;
+                }else{
+                    account.removeAccount();
+                    mainMenuValid = false;
+                }
                 break;
             case 0:
                 mainMenuValid = false;

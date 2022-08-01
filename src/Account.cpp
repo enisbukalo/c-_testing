@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Account.h"
 
 Account::Account(std::string firstNameIn, std::string lastNameIn) :
@@ -39,7 +37,7 @@ void Account::createFile(){
 };
 
 bool Account::checkAccountExists(){
-    accountExists = true ? std::filesystem::exists(accountFilePath) : false;
+    accountExists = std::filesystem::exists(accountFilePath) ? true : false;
     return getAccountExists();
 };
 
@@ -98,6 +96,10 @@ bool Account::withdrawFromAccount(double amountToWithdraw){
         toReturn = false;
     }
     return toReturn;
+};
+
+void Account::removeAccount(){
+    std::filesystem::remove(accountFilePath);
 };
 
 //Getters
