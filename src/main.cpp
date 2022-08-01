@@ -13,7 +13,7 @@ int main()
     std::string accountFirstName;
     std::string accountLastName;
     std::string accountName;
-    bool mainMenuValid = true;
+    bool accountMenuValid = true;
 
     drawLogo();
 
@@ -27,7 +27,7 @@ int main()
                 std::cin >> accountFirstName;
                 std::cout << "Enter Your Last Name  : ";
                 std::cin >> accountLastName;
-                mainMenuValid = true;
+                accountMenuValid = true;
                 break;
             case 0:
                 exit(0);
@@ -59,7 +59,7 @@ int main()
             }
         }
 
-        while(mainMenuValid)
+        while(accountMenuValid)
         {   
             //Scoped Variables
             double depositAmount;
@@ -111,11 +111,11 @@ int main()
                     std::cin >> removalSelection;
                 }else{
                     account.removeAccount();
-                    mainMenuValid = false;
+                    accountMenuValid = false;
                 }
                 break;
             case 0:
-                mainMenuValid = false;
+                accountMenuValid = false;
                 break;
             default:
                 std::cout << "Sorry, that wasn't a valid choice." << std::endl;
