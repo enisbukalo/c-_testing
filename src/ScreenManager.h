@@ -49,7 +49,7 @@ void showAccountMenu(){
     std::cout << "1 --> Deposit Into Account" << std::endl;
     std::cout << "2 --> Withdraw From Account" << std::endl;
     std::cout << "3 --> Remove Account" << std::endl;
-    std::cout << "0 --> Quit" << std::endl;
+    std::cout << "0 --> Main Menu" << std::endl;
     std::cout << "------------------------------" << std::endl;
     std::cout << "" << std::endl;
     std::cout << "Enter your choice: (0-4): ";

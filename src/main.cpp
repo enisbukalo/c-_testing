@@ -23,9 +23,9 @@ int main()
 
         switch(mainMenuChoice){
             case 1:
-                std::cout << "Enter Your First Name : ";
+                std::cout << "Enter Your First Name: ";
                 std::cin >> accountFirstName;
-                std::cout << "Enter Your Last Name  : ";
+                std::cout << " Enter Your Last Name: ";
                 std::cin >> accountLastName;
                 accountMenuValid = true;
                 break;
