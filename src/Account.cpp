@@ -34,6 +34,7 @@ void Account::createAccount()
         accountBalance = std::ceil(initialBalance * 100.0) / 100.0;
         saveAccount();
         std::cout << "Congratulations! Your Account Balance Is Now: $" << getAccountBalance() << std::endl;
+        numOfTransactions = 0;
     }
     else
     {
@@ -66,7 +67,7 @@ void Account::showWelcomeMessage()
     system("clear");
     std::cout << "****Welcome To Your Account " << firstName + " " + lastName + "****" << std::endl;
     std::cout << "****Account Name   : " << accountName << std::endl;
-    std::cout << "****Account Balance:$s" << accountBalance << std::endl;
+    std::cout << "****Account Balance:$" << accountBalance << std::endl;
     std::cout << "****Transactions   : " << numOfTransactions << std::endl;
 };
 
@@ -76,35 +77,28 @@ void Account::saveAccount()
 
     std::ofstream outfile;
     outfile.open(accountFilePath);
-    outfile << firstName + "\n";
-    outfile << lastName + "\n";
-    outfile << accountBalanceString + "\n";
+    outfile << firstName + " " + lastName + " " + accountBalanceString;
     outfile.close();
 };
 
 void Account::loadAccount()
 {
     int i = 0;
-    std::string tempLine;
+    std::string firstNameIn, lastNameIn;
+    double accountBalanceIn;
 
     std::ifstream infile;
     infile.open(accountFilePath);
-    while (infile >> tempLine)
+
+    while (!infile.eof())
     {
-        if (i == 0)
-        {
-            firstName = tempLine;
-        }
-        else if (i == 1)
-        {
-            lastName = tempLine;
-        }
-        else
-        {
-            accountBalance = std::stod(tempLine);
-        }
-        i++;
-    }
+        infile >> firstNameIn >> lastNameIn >> accountBalanceIn;
+    };
+
+    firstName = firstNameIn;
+    lastName = lastNameIn;
+    accountBalance = accountBalanceIn;
+
     infile.close();
 };
 

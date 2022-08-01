@@ -119,8 +119,8 @@ int main()
                     std::cout << "-----------------------------------------------------------" << std::endl;
                     std::cout << "Transaction Timestamp: " << transaction.timestamp << std::endl;
                     std::cout << "     Transaction Type: " << TransactionStructConverter::TransactionConversion(transaction.transactionType) << std::endl;
-                    std::cout << "   Transaction Amount:$" << transaction.transactionAmount << std::endl;
-                    std::cout << "      Running Balance:$" << transaction.balance << std::endl;
+                    std::cout << "   Transaction Amount:$" << std::stod(transaction.transactionAmount) << std::endl;
+                    std::cout << "      Running Balance:$" << std::fixed << std::cout.precision(2) << transaction.balance << std::endl;
                 }
                 std::cout << "-----------------------------------------------------------" << std::endl;
                 std::cout << "Press Any Button To Continue...";
