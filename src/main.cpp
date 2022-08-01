@@ -6,7 +6,7 @@
 #include "StringTrimmer.h"
 
 int main()
-{   
+{
     int accountMenuChoice;
     int mainMenuChoice;
     char createAccountChoice;
@@ -17,33 +17,36 @@ int main()
 
     drawLogo();
 
-    while (true){
+    while (true)
+    {
         showMainMenu();
         std::cin >> mainMenuChoice;
 
-        switch(mainMenuChoice){
-            case 1:
-                std::cout << "Enter Your First Name: ";
-                std::cin >> accountFirstName;
-                std::cout << " Enter Your Last Name: ";
-                std::cin >> accountLastName;
-                accountMenuValid = true;
-                break;
-            case 0:
-                exit(0);
-                break;
-            default:
-                std::cout << "Sorry, that wasn't a valid choice." << std::endl;
-                exit(0);
-                break;
+        switch (mainMenuChoice)
+        {
+        case 1:
+            std::cout << "Enter Your First Name: ";
+            std::cin >> accountFirstName;
+            std::cout << " Enter Your Last Name: ";
+            std::cin >> accountLastName;
+            accountMenuValid = true;
+            break;
+        case 0:
+            exit(0);
+            break;
+        default:
+            std::cout << "Sorry, that wasn't a valid choice." << std::endl;
+            exit(0);
+            break;
         }
 
         Account account(trimString(accountFirstName), trimString(accountLastName));
 
-        if (!account.getAccountExists()){
+        if (!account.getAccountExists())
+        {
             std::cout << "\nSorry, your account does not exist, would you like to create one? (y/n): ";
             std::cin >> createAccountChoice;
-            switch(toupper(createAccountChoice))
+            switch (toupper(createAccountChoice))
             {
             case 'Y':
                 account.createAccount();
@@ -59,9 +62,9 @@ int main()
             }
         }
 
-        while(accountMenuValid)
-        {   
-            //Scoped Variables
+        while (accountMenuValid)
+        {
+            // Scoped Variables
             double depositAmount;
             double withdrawAmount;
             bool overdraw;
@@ -73,28 +76,35 @@ int main()
 
             std::cin >> accountMenuChoice;
 
-            switch(accountMenuChoice)
+            switch (accountMenuChoice)
             {
-            case 1: 
+            case 1:
                 account.showWelcomeMessage();
                 showDepositScreen();
-                if (!(std::cin >> depositAmount)){
+                if (!(std::cin >> depositAmount))
+                {
                     std::cin.clear();
                     std::cin.ignore(123, '\n');
-                }else{
+                }
+                else
+                {
                     account.depositToAccount(depositAmount);
                 }
                 break;
             case 2:
                 account.showWelcomeMessage();
                 showWithdrawalScreen();
-                if (!(std::cin >> withdrawAmount)){
+                if (!(std::cin >> withdrawAmount))
+                {
                     std::cin.clear();
                     std::cin.ignore(123, '\n');
-                }else{
+                }
+                else
+                {
                     overdraw = account.withdrawFromAccount(withdrawAmount);
 
-                    if (overdraw){
+                    if (overdraw)
+                    {
                         clearScreen();
                         showOverDrawScreen();
                         std::cin >> withdrawSelection;
@@ -103,11 +113,14 @@ int main()
 
                 break;
             case 3:
-                if (account.getAccountBalance() > 0.0){
+                if (account.getAccountBalance() > 0.0)
+                {
                     clearScreen();
                     showCantRemoveAccountScreen();
                     std::cin >> removalSelection;
-                }else{
+                }
+                else
+                {
                     account.removeAccount();
                     accountMenuValid = false;
                 }
