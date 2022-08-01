@@ -3,15 +3,17 @@
 
 #include <iostream>
 
-void clearScreen(){
-    #ifdef WINDOWS
-        system("cls");
-    #else
-        system("clear");
-    #endif
+void clearScreen()
+{
+#ifdef WINDOWS
+    system("cls");
+#else
+    system("clear");
+#endif
 };
 
-void drawLogo(){
+void drawLogo()
+{
     clearScreen();
     std::cout << "                                " << std::endl;
     std::cout << "              |||               " << std::endl;
@@ -37,7 +39,8 @@ void drawLogo(){
     std::cout << "***Banking Information System***" << std::endl;
 };
 
-void showMainMenu(){
+void showMainMenu()
+{
     drawLogo();
     std::cout << std::endl;
     std::cout << "***********Main Menu***********" << std::endl;
@@ -49,7 +52,8 @@ void showMainMenu(){
     std::cout << "Enter your choice: (0-1): ";
 };
 
-void showAccountMenu(){
+void showAccountMenu()
+{
     std::cout << std::endl;
     std::cout << "*********Account Menu*********" << std::endl;
     std::cout << "------------------------------" << std::endl;
@@ -63,21 +67,24 @@ void showAccountMenu(){
     std::cout << "Enter your choice: (0-4): ";
 };
 
-void showDepositScreen(){
+void showDepositScreen()
+{
     std::cout << std::endl;
     std::cout << "********Deposit Screen********" << std::endl;
     std::cout << "------------------------------" << std::endl;
     std::cout << "Enter Amount To Deposit: ";
 };
 
-void showWithdrawalScreen(){
+void showWithdrawalScreen()
+{
     std::cout << std::endl;
     std::cout << "*******Withdrawal Screen*******" << std::endl;
     std::cout << "-------------------------------" << std::endl;
     std::cout << "Enter Amount To Withdraw: ";
 };
 
-void showOverDrawScreen(){
+void showOverDrawScreen()
+{
     std::cout << std::endl;
     std::cout << "*****Withdrawal Prevented*****" << std::endl;
     std::cout << "------------------------------" << std::endl;
@@ -85,7 +92,8 @@ void showOverDrawScreen(){
     std::cout << "Press Any Button To Continue...";
 };
 
-void showCantRemoveAccountScreen(){
+void showCantRemoveAccountScreen()
+{
     std::cout << std::endl;
     std::cout << "***Account Removal Prevented***" << std::endl;
     std::cout << "-------------------------------" << std::endl;
@@ -94,7 +102,8 @@ void showCantRemoveAccountScreen(){
     std::cout << "Press Any Button To Continue...";
 };
 
-void showTransactionsScreen(){
+void showTransactionsScreen()
+{
     std::cout << std::endl;
     std::cout << "******Transactions Screen******" << std::endl;
     std::cout << "-------------------------------" << std::endl;

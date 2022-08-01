@@ -129,12 +129,12 @@ void Account::loadTransactions()
     std::string transAmountIn;
     double transBalanceIn;
     std::string transTimestampIn;
-    
+
     std::ifstream infile;
     infile.open(transactionFilePath);
 
     while (!infile.eof())
-    {   
+    {
         infile >> tempTypeIn >> transAmountIn >> transBalanceIn >> transTimestampIn;
         transTypeIn = TransactionTypeConverter::transactionTypeConversion(tempTypeIn);
 

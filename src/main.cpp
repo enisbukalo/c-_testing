@@ -122,6 +122,7 @@ int main()
                     std::cout << "   Transaction Amount:$" << transaction.transactionAmount << std::endl;
                     std::cout << "      Running Balance:$" << transaction.balance << std::endl;
                 }
+                std::cout << "-----------------------------------------------------------" << std::endl;
                 std::cout << "Press Any Button To Continue...";
                 std::cin >> transactionSelection;
                 break;
