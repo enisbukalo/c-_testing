@@ -10,14 +10,14 @@
 class Account{
     public:
         //Constructor
-        Account(std::string firstName, std::string lastName);
+        Account(std::string&, std::string&);
 
         //Methods
         void showWelcomeMessage();
         bool checkAccountExists();
         void createAccount();
-        void depositToAccount(double);
-        bool withdrawFromAccount(double);
+        void depositToAccount(double&);
+        bool withdrawFromAccount(double&);
         void removeAccount();
 
         //Getters

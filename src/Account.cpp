@@ -1,6 +1,6 @@
 #include "Account.h"
 
-Account::Account(std::string firstNameIn, std::string lastNameIn) :
+Account::Account(std::string& firstNameIn, std::string& lastNameIn) :
     firstName(firstNameIn), lastName(lastNameIn), accountName(firstNameIn + lastNameIn), accountFilePath(firstNameIn + lastNameIn + ".bank"){
     if (checkAccountExists()){
         loadAccount();
@@ -81,12 +81,12 @@ void Account::loadAccount(){
     infile.close();
 };
 
-void Account::depositToAccount(double amountToDeposit){
+void Account::depositToAccount(double& amountToDeposit){
     accountBalance += amountToDeposit;
     saveAccount();
-};
+}
 
-bool Account::withdrawFromAccount(double amountToWithdraw){
+bool Account::withdrawFromAccount(double& amountToWithdraw){
     bool toReturn;
     if (amountToWithdraw > accountBalance){
         toReturn = true;
