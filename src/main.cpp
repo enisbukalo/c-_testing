@@ -95,8 +95,7 @@ int main()
                     overdraw = account.withdrawFromAccount(withdrawAmount);
 
                     if (overdraw){
-                        //Linux specific to clear terminal.
-                        system("clear");
+                        clearScreen();
                         showOverDrawScreen();
                         std::cin >> withdrawSelection;
                     }
@@ -105,8 +104,7 @@ int main()
                 break;
             case 3:
                 if (account.getAccountBalance() > 0.0){
-                    //Linux specific to clear terminal.
-                    system("clear");
+                    clearScreen();
                     showCantRemoveAccountScreen();
                     std::cin >> removalSelection;
                 }else{

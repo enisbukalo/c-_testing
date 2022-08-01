@@ -3,9 +3,16 @@
 
 #include <iostream>
 
+void clearScreen(){
+    #ifdef WINDOWS
+        system("cls");
+    #else
+        system("clear");
+    #endif
+};
+
 void drawLogo(){
-    //Linux specific to clear terminal.
-    system("clear");
+    clearScreen();
     std::cout << "                                " << std::endl;
     std::cout << "             |||                " << std::endl;
     std::cout << "             |||                " << std::endl;
