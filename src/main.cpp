@@ -70,6 +70,7 @@ int main()
             bool overdraw;
             std::string withdrawSelection;
             std::string removalSelection;
+            std::string transactionSelection;
 
             account.showWelcomeMessage();
             showAccountMenu();
@@ -110,9 +111,21 @@ int main()
                         std::cin >> withdrawSelection;
                     }
                 }
-
                 break;
             case 3:
+                showTransactionsScreen();
+                for (Transaction &transaction : account.getTransactions())
+                {
+                    std::cout << "-----------------------------------------------------------" << std::endl;
+                    std::cout << "Transaction Timestamp: " << transaction.timestamp << std::endl;
+                    std::cout << "     Transaction Type: " << TransactionStructConverter::TransactionConversion(transaction.transactionType) << std::endl;
+                    std::cout << "   Transaction Amount:$" << transaction.transactionAmount << std::endl;
+                    std::cout << "      Running Balance:$" << transaction.balance << std::endl;
+                }
+                std::cout << "Press Any Button To Continue...";
+                std::cin >> transactionSelection;
+                break;
+            case 4:
                 if (account.getAccountBalance() > 0.0)
                 {
                     clearScreen();

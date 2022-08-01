@@ -153,6 +153,54 @@ src/Account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Account.cpp.s
 .PHONY : src/Account.cpp.s
 
+src/TransactionStruct.o: src/TransactionStruct.cpp.o
+.PHONY : src/TransactionStruct.o
+
+# target to build an object file
+src/TransactionStruct.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/TransactionStruct.cpp.o
+.PHONY : src/TransactionStruct.cpp.o
+
+src/TransactionStruct.i: src/TransactionStruct.cpp.i
+.PHONY : src/TransactionStruct.i
+
+# target to preprocess a source file
+src/TransactionStruct.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/TransactionStruct.cpp.i
+.PHONY : src/TransactionStruct.cpp.i
+
+src/TransactionStruct.s: src/TransactionStruct.cpp.s
+.PHONY : src/TransactionStruct.s
+
+# target to generate assembly for a file
+src/TransactionStruct.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/TransactionStruct.cpp.s
+.PHONY : src/TransactionStruct.cpp.s
+
+src/TransactionType.o: src/TransactionType.cpp.o
+.PHONY : src/TransactionType.o
+
+# target to build an object file
+src/TransactionType.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/TransactionType.cpp.o
+.PHONY : src/TransactionType.cpp.o
+
+src/TransactionType.i: src/TransactionType.cpp.i
+.PHONY : src/TransactionType.i
+
+# target to preprocess a source file
+src/TransactionType.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/TransactionType.cpp.i
+.PHONY : src/TransactionType.cpp.i
+
+src/TransactionType.s: src/TransactionType.cpp.s
+.PHONY : src/TransactionType.s
+
+# target to generate assembly for a file
+src/TransactionType.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/TransactionType.cpp.s
+.PHONY : src/TransactionType.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -189,6 +237,12 @@ help:
 	@echo "... src/Account.o"
 	@echo "... src/Account.i"
 	@echo "... src/Account.s"
+	@echo "... src/TransactionStruct.o"
+	@echo "... src/TransactionStruct.i"
+	@echo "... src/TransactionStruct.s"
+	@echo "... src/TransactionType.o"
+	@echo "... src/TransactionType.i"
+	@echo "... src/TransactionType.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

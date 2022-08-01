@@ -55,7 +55,8 @@ void showAccountMenu(){
     std::cout << "------------------------------" << std::endl;
     std::cout << "1 --> Deposit Into Account" << std::endl;
     std::cout << "2 --> Withdraw From Account" << std::endl;
-    std::cout << "3 --> Remove Account" << std::endl;
+    std::cout << "3 --> View Transactions" << std::endl;
+    std::cout << "4 --> Remove Account" << std::endl;
     std::cout << "0 --> Main Menu" << std::endl;
     std::cout << "------------------------------" << std::endl;
     std::cout << "" << std::endl;
@@ -91,6 +92,12 @@ void showCantRemoveAccountScreen(){
     std::cout << "Sorry, You Have Money In Your Account Still." << std::endl;
     std::cout << "Try Again After Withdrawing Your Money." << std::endl;
     std::cout << "Press Any Button To Continue...";
+};
+
+void showTransactionsScreen(){
+    std::cout << std::endl;
+    std::cout << "******Transactions Screen******" << std::endl;
+    std::cout << "-------------------------------" << std::endl;
 };
 
 #endif
